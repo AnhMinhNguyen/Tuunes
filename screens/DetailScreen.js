@@ -70,7 +70,7 @@ export default DetailScreen = ({ navigation }) => {
 					<TouchableOpacity onPress={() => { }}>
 						<Ionicons name="share-outline" size={30} color={'white'} />
 					</TouchableOpacity>
-					<TouchableOpacity onPress={() => togglePlayback(playBackState)}>
+					<TouchableOpacity onPress={() => { }}>
 						<Ionicons name="heart-outline" size={30} color={'white'} />
 					</TouchableOpacity>
 					<TouchableOpacity onPress={() => togglePlayback(playBackState)}>
