@@ -53,7 +53,7 @@ export default DetailScreen = ({ navigation }) => {
 
     // useEffect(() => {
     //     setupPlayer();
-    // })
+    // }, []);
 
     // const playBackState = usePlaybackState();
 
