@@ -13,7 +13,9 @@ import React, { useRef, useState, useEffect, useContext } from "react";
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 // import AsyncStorage from '@react-native-async-storage/async-storage';
+
 import { SongTitleContext } from '../data/SongTitleContext';
+import { SongArtistContext } from "../data/SongArtistContext";
 import { SongIconContext } from '../data/SongIconContext';
 import { SongIdContext } from '../data/SongIdContext';
 import { SongListContext } from '../data/SongListContext';
@@ -27,11 +29,10 @@ export default DetailScreen = ({ navigation }) => {
 
     // Contexts
     const [clickedSongTitle, setClickedSongTitle] = useContext(SongTitleContext);
+    const [clickedSongArtist, setClickedSongArtist] = useContext(SongArtistContext);
     const [clickedSongIcon, setClickedSongIcon] = useContext(SongIconContext);
     const [clickedSongId, setClickedSongId] = useContext(SongIdContext);
     const [songListData, setSongListData] = useContext(SongListContext);
-
-    const songTitle = clickedSongTitle;
 
     // const setupPlayer = async () => {
     //     await TrackPlayer.setupPlayer();
@@ -62,8 +63,8 @@ export default DetailScreen = ({ navigation }) => {
             <View style={styles.maincontainer}>
                 {/* Ringtone content */}
                 <View>
-                    <Text style={styles.ringtonesTitle}>Title</Text>
-                    <Text style={styles.ringtonesArtist}>Artist</Text>
+                    <Text style={styles.ringtonesTitle}>{clickedSongTitle}</Text>
+                    <Text style={styles.ringtonesArtist}>{clickedSongArtist}</Text>
                 </View>
                 {/* Artwork */}
                 <View style={styles.imageWrapper}>
