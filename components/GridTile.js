@@ -13,8 +13,8 @@ export default GridTile = props => {
           source={props.source}
         />
         <View style={styles.itemWrapper}>
-          <Text style={styles.gridText}>{props.titleText}</Text>
-          <Text style={styles.gridText}>{props.artistText}</Text>
+          <Text style={styles.gridTextTitle}>{props.titleText}</Text>
+          <Text style={styles.gridTextArtist}>{props.artistText}</Text>
         </View>
 
       </TouchableOpacity>
@@ -39,10 +39,14 @@ const styles = StyleSheet.create({
     flex: 1,
     // flexDirection: 'row',
   },
-  gridText: {
-    fontSize: 18,
+  gridTextTitle: {
+    fontSize: 20,
     color: 'white',
     fontWeight: 'bold',
+  },
+  gridTextArtist:{
+    fontSize: 16,
+    color: 'white',
   },
   columnWrapper: {
     flex: 1,

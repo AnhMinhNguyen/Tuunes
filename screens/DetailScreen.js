@@ -69,7 +69,7 @@ export default DetailScreen = ({ navigation }) => {
                 {/* Artwork */}
                 <View style={styles.imageWrapper}>
                     <Image style={styles.ringtonesImage}
-                        source={require('../assets/ringtones_icons/306191216_486187240182509_4368508577780012850_n.png')}
+                        source={clickedSongIcon}
                     >
                     </Image>
                 </View>
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
         borderRadius: 15,
     },
     ringtonesTitle: {
-        fontSize: 18,
+        fontSize: 20,
         fontWeight: 'bold',
         color: 'white'
     },
