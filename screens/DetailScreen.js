@@ -45,7 +45,7 @@ export default DetailScreen = ({ navigation }) => {
 
 	useEffect(() => {
 		setUpPlayer();
-	});
+	}, []);
 
 	const playBackState = usePlaybackState();
 
@@ -59,10 +59,10 @@ export default DetailScreen = ({ navigation }) => {
 				</View>
 				{/* Artwork */}
 				<View style={styles.imageWrapper}>
-					<Image style={styles.ringtonesImage}
+					<Image
+						style={styles.ringtonesImage}
 						source={clickedSongIcon}
-					>
-					</Image>
+					/>
 				</View>
 
 				{/* Music controls */}

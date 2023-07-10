@@ -6,12 +6,11 @@ import { SongTitleContext } from './data/SongTitleContext';
 import { SongArtistContext } from "./data/SongArtistContext";
 import { SongIconContext } from './data/SongIconContext';
 import { SongIdContext } from './data/SongIdContext';
-import { SONGS, IDCOUNTERSONGS } from "./data/dummy-data";
+import { SONGS } from "./data/dummy-data";
 
 export default (App) => {
   const [songListData, setSongListData] = useState({
-    songs: SONGS,
-    idCounterSongs: IDCOUNTERSONGS
+    songs: SONGS
   });
   const [clickedSongTitle, setClickedSongTitle] = useState('');
   const [clickedSongArtist, setClickedSongArtist] = useState('');

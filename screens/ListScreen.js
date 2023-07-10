@@ -9,41 +9,41 @@ import { SongListContext } from '../data/SongListContext';
 
 export default ListScreen = ({ navigation }) => {
 
-    // Contexts
-    const [clickedSongTitle, setClickedSongTitle] = useContext(SongTitleContext);
-    const [clickedSongArtist, setClickedSongArtist] = useContext(SongArtistContext);
-    const [clickedSongIcon, setClickedSongIcon] = useContext(SongIconContext);
-    const [clickedSongId, setClickedSongId] = useContext(SongIdContext);
-    const [songListData, setSongListData] = useContext(SongListContext);
+	// Contexts
+	const [clickedSongTitle, setClickedSongTitle] = useContext(SongTitleContext);
+	const [clickedSongArtist, setClickedSongArtist] = useContext(SongArtistContext);
+	const [clickedSongIcon, setClickedSongIcon] = useContext(SongIconContext);
+	const [clickedSongId, setClickedSongId] = useContext(SongIdContext);
+	const [songListData, setSongListData] = useContext(SongListContext);
 
-    const songs = songListData.songs;
+	const songs = songListData.songs;
 
-    // const clickHandler = (id) => {
-    //     navigation.navigate("Detail", { itemId: id });
-    // };
+	// const clickHandler = (id) => {
+	//     navigation.navigate("Detail", { itemId: id });
+	// };
 
-    return (
-        <FlatList
-            data={songs}
-            renderItem={(itemData) => {
-                return (
-                    <GridTile
-                        source={itemData.item.icon}
-                        titleText={itemData.item.title}
-                        artistText={itemData.item.artist}
-                        onClick={() => {
-                            setClickedSongId(itemData.item.id);
-                            setClickedSongIcon(itemData.item.icon);
-                            setClickedSongTitle(itemData.item.title);
-                            setClickedSongArtist(itemData.item.artist);
-                            navigation.navigate("Detail");
-                        }}
-                        id={itemData.item.id}
-                    />
-                );
-            }}
-        />
-    );
+	return (
+		<FlatList
+			data={songs}
+			renderItem={(itemData) => {
+				return (
+					<GridTile
+						source={itemData.item.icon}
+						titleText={itemData.item.title}
+						artistText={itemData.item.artist}
+						onClick={() => {
+							setClickedSongId(itemData.item.id);
+							setClickedSongIcon(itemData.item.icon);
+							setClickedSongTitle(itemData.item.title);
+							setClickedSongArtist(itemData.item.artist);
+							navigation.navigate("Detail");
+						}}
+						id={itemData.item.id}
+					/>
+				);
+			}}
+		/>
+	);
 }
 
 // import React, { useLayoutEffect, useContext } from "react";
